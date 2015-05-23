@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.2.1'
 
+gem 'rack'
+
 group :test do
   gem 'rspec'
   gem 'cucumber'

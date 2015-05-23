@@ -6,4 +6,8 @@ RuboCop::RakeTask.new :cop
 RSpec::Core::RakeTask.new :spec
 Cucumber::Rake::Task.new :cuke
 
-task default: [:cop, :spec, :cuke]
+task :default do
+  %x( bundle exec rackup )
+end
+
+task test: [:cop, :spec, :cuke]
